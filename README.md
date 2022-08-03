@@ -2,4 +2,4 @@
 
 ## Drip Store
 
-### 🔥 dripstore is an commerce application, based on microservises, container orchestration with Docker and Kubernetis and dedicated CI/CD pipeline with Jenkins
+### 🔥 dripstore is an commerce application, based on microservice, container orchestration with Docker and Kubernetes and dedicated CI/CD pipeline with Jenkins
