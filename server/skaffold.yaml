@@ -1,0 +1,30 @@
+apiVersion: skaffold/v2beta3
+kind: Config
+metadata:
+  name: dripstore-skaffold
+deploy:
+  kubectl:
+    manifests:
+    - ./k8s/*
+build:
+  local:
+    push: false
+  artifacts:
+  
+  - image: chitwan001/dripstore-products
+    context: products
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual: 
+      - src: "src/**/*.js"
+        dest: "."
+
+  - image: chitwan001/dripstore-auth
+    context: auth
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+      - src: "src/**/*.js"
+        dest: "."
