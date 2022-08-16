@@ -1,0 +1,21 @@
+{
+  "name": "dripstore",
+  "version": "1.0.0",
+  "description": "##### Dripstore is an e-commerce application, based on microservice, container orchestration with Docker and Kubernetes and dedicated CI/CD pipeline with Jenkins 🔥",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && skaffold dev",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhythmshandlya/dripstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhythmshandlya/dripstore/issues"
+  },
+  "homepage": "https://github.com/rhythmshandlya/dripstore#readme"
+}
