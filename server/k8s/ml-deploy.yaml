@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ml
+  template:
+    metadata:
+      labels:
+        app: ml
+    spec:
+      containers:
+      - image: dripstore/ml
+        name: ml
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-srv
+spec:
+  selector:
+    app: ml
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+

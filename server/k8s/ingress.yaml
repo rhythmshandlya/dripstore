@@ -27,11 +27,13 @@ spec:
                 port:
                   number: 3002
 
-          - path: /(/|$)(.*)
+          - path: /api/ml(/|$)(.*)
             pathType: Prefix
             backend:
               service:
-                name: client-srv
+                name: ml-srv
                 port:
-                  number: 3000
+                  number: 5000
+
+
          

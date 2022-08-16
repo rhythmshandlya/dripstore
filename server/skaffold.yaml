@@ -28,3 +28,11 @@ build:
       manual:
       - src: "src/**/*.js"
         dest: "."
+  - image: dripstore/ml
+    context: ml
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+      - src: "**/*.py"
+        dest: "."
