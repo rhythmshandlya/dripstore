@@ -11,7 +11,7 @@ build:
     push: false
   artifacts:
   
-  - image: chitwan001/dripstore-products
+  - image: dripstore/dripstore-products
     context: products
     docker:
       dockerfile: Dockerfile
@@ -20,7 +20,7 @@ build:
       - src: "src/**/*.js"
         dest: "."
 
-  - image: chitwan001/dripstore-auth
+  - image: dripstore/dripstore-auth
     context: auth
     docker:
       dockerfile: Dockerfile

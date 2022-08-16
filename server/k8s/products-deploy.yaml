@@ -13,7 +13,7 @@ spec:
         app: products
     spec:
       containers:
-      - image: chitwan001/dripstore-products
+      - image: dripstore/dripstore-products
         name: products
 
 ---
